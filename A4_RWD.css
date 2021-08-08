@@ -1,0 +1,156 @@
+/* common style */
+body {
+  margin: 0 auto;
+}
+
+header {
+  position: relative;
+  background-color: #eeeeee;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  padding: 0.5em;
+}
+
+.web-logo {
+  margin-right: auto;
+  margin-left: 25px;
+}
+
+.menulist {
+display: flex;
+}
+
+
+.item-tag {
+  display: block;
+  text-decoration: none;
+  padding: 0.5em 1.8em;
+  color: black;
+}
+
+/* hide icon in PC size */
+.showmenu {
+  display: none;
+  color: black;
+  text-decoration: none;
+}
+
+
+
+.action-btn,.greeting {
+  background-color: #ccdeee;
+  justify-content: center;
+}
+
+
+.greeting {
+  font-size: 30px;
+  text-align: center;
+  min-height: 180px;
+  line-height: 130px;
+  justify-content: center;
+}
+
+.sec-title {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 22px;
+}
+
+.listDiv {
+  display: none;
+}
+
+.action-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+}
+
+.box {
+  background-color: #889aaa;
+  margin: 8px 8px;
+  width: 400px;
+  min-height: 150px;
+  text-align: center;
+  padding-top: 5px;
+}
+
+/* ----RWD---- */
+
+@media sreen and (min-width:1200px) {
+  .box {
+    width: 1200px;
+  }
+  
+  .menulist {
+  display: flex;
+  flex-flow: row nowrap;
+  }
+}
+
+
+@media screen and (min-width: 500px) and (max-width: 800px) {
+  .box-container, .listDiv {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  
+  .box {
+    max-width: 300px;
+    min-width: auto;
+  }
+  
+   .showmenu {
+    display: block;
+    float: right;
+    margin: 1em;
+  }
+  
+  .menulist {
+    display:none;
+    position: fixed;
+    float: right;
+    background-color: white;
+    right: 0;
+    left: 50%;
+    top: 61px;
+    min-height: 570px;
+    padding: 1em auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .box-container, .listDiv {
+    display:flex;
+    flex-flow: column wrap;
+  }
+
+  .showmenu {
+    display: block;
+    float: right;
+    margin: 1em;
+  }
+  
+  .menulist {
+    display:none;
+    position: fixed;
+    float: right;
+    background-color: white;
+    right: 0;
+    left: 50%;
+    top: 61px;
+    min-height: 570px;
+    padding: 1em auto;
+  }
+}

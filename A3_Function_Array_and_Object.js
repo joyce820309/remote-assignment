@@ -8,7 +8,7 @@ function avg(data) {
     }
     return sum/ items.length
 }
-avg({
+avg({     //呼叫avg
     size: 3,
     products: [
         {
@@ -25,6 +25,4 @@ avg({
         }
     ]
 }); // show the average price of all products
-
-avg(avg)
 
